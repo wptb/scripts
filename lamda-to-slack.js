@@ -7,14 +7,14 @@ console.log('[Amazon CloudWatch Notification]');
 var ALARM_CONFIG = [
 	{
 		condition: "ALARM:",
-		channel: "#alerts-slonline",
+		channel: "#alerts",
 //		mention: "<@channel> ",
 		color: "danger",
 		severity: "WARNING"
 	},
 	{
 		condition: "OK",
-		channel: "#alerts-slonline",
+		channel: "#alerts",
 //		mention: "<@channel> ",
 		color: "good",
 		severity: "WARNING"
@@ -81,7 +81,7 @@ exports.handler = function(event, context) {
 			"fields": [
 				{
 					"title": "Account",
-					"value": "slonline",
+					"value": "ACCOUNT_NAME",
 					"short": true
 				}
 			],
